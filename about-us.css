@@ -125,11 +125,14 @@
     justify-content: center;
     gap: 40px;
 }
-.content h1 {
-    font-size:3rem;
-}
-
 
 .content p {
     line-height: 2;
+}
+
+.section .content {
+    height: 700px;
+}
+.section .content h1 {
+    text-transform: uppercase;
 }

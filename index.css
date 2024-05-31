@@ -34,12 +34,13 @@
     color: white;
 }
 .slider .content .title {
-    font-size:3rem;
+    font-size:2rem;
+    text-transform: uppercase;
 }
 
 .slider .content .desc {
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     
 }
 .slider .content .btn {
@@ -74,6 +75,27 @@
 }
 .slick-dots li button:before {
     color: white !important;
+}
+.slick-prev {
+    left: 25px !important;
+    z-index: 1;
+    background: url('left-arrow.png') no-repeat center center;
+    background-size: contain;
+    width: 30px; /* 이미지 크기에 맞게 조정 */
+    height: 50px; /* 이미지 크기에 맞게 조정 */
+}
+.slick-next {
+    right: 25px !important;
+    z-index: 1;
+    background: url('right-arrow2.png') no-repeat center center;
+    background-size: contain;
+    width: 30px; /* 이미지 크기에 맞게 조정 */
+    height: 50px; /* 이미지 크기에 맞게 조정 */
+}
+
+.slick-prev:before,
+.slick-next:before {
+    content: '';
 }
 
 #backtitle {

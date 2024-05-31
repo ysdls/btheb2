@@ -35,12 +35,12 @@
     color: white;
 }
 .slider .content .title {
-    font-size:3rem;
+    font-size:2rem;
 }
 
 .slider .content .desc {
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     
 }
 .slider .content .btn {
@@ -77,6 +77,28 @@
 .slick-dots li button:before {
     color: white !important;
 }
+.slick-prev {
+    left: 25px !important;
+    z-index: 1;
+    background: url('left-arrow.png') no-repeat center center;
+    background-size: contain;
+    width: 30px; /* 이미지 크기에 맞게 조정 */
+    height: 50px; /* 이미지 크기에 맞게 조정 */
+}
+.slick-next {
+    right: 25px !important;
+    z-index: 1;
+    background: url('right-arrow2.png') no-repeat center center;
+    background-size: contain;
+    width: 30px; /* 이미지 크기에 맞게 조정 */
+    height: 50px; /* 이미지 크기에 맞게 조정 */
+}
+
+.slick-prev:before,
+.slick-next:before {
+    content: '';
+}
+
 
 .section {
     width: 80%;
@@ -108,9 +130,10 @@
 }
 .brands-container {
     display: flex;
-    justify-content: space-between;
     padding-top: 20px;
-    gap:20px;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: start;
 
 }
 
@@ -119,8 +142,7 @@
     border: 1px solid #ddd;
     border-radius: 10px;
     overflow: hidden;
-    width: 100%;
-    max-width: 1000px;
+    width: calc(25% - 15px);
 }
 
 .brand-box {
@@ -177,7 +199,7 @@
     
 }
 .shop-info p:first-child {
-    font-size:2rem;
+    font-size:1.5rem;
     color:black;
     font-weight: bold;
     padding-top: 80px;
