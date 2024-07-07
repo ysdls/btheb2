@@ -305,3 +305,7 @@ header {
     color: #929292;
 }
 
+.footer .notice {
+    text-align: right;
+    width: 100%;
+}
