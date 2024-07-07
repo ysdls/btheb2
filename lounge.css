@@ -105,12 +105,13 @@
     justify-content: start;
     margin-top: 40px;
     gap:69px;
+    flex-wrap: wrap;
 }
 .card-wapper {
     display: inline-block;
     color: black;
     text-decoration: none;
-    width: 30%;
+    width: calc(30% - 10px);
     cursor: pointer;
 
 }
@@ -206,4 +207,22 @@
 }
 .back a {
     color: black;
+}
+
+@media (max-width: 1024px) { 
+    .container {
+        gap: 10px;
+    }
+    .video-background {
+        height: 30vh;
+        background-color: black;
+    }
+    .section {
+        width: 100%;
+        padding: 80px 10px;
+    }
+    .card-wapper {
+        width:100%;
+
+    }
 }

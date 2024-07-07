@@ -26,34 +26,34 @@
     gap: 40px;
     margin-top: 40px;
 }
-.location-container  .left  {
+.location-container  .right  {
     font-size: 1rem;
 }
-.location-container  .left .addr  {
+.location-container  .right .addr  {
     font-weight: bold;
     font-size: 1.2rem;
 }
-.location-container  .left .gap  {
+.location-container  .right .gap  {
     margin-top: 50px;
 }
 
-.location-container  .left div {
+.location-container  .right div {
     display: flex;
     flex-direction: column;
     gap:20px
 }
-.location-container  .left .vehicle {
+.location-container  .right .vehicle {
     font-weight: bold;
     font-size: 1rem;
 }
-.location-container  .left .top {
+.location-container  .right .top {
     margin-top :80px;
 }
 
-.location-container .right img {
+.location-container .left img {
     width: 700px;
 }
-.location-container .right .addr {
+.location-container .left .addr {
     margin-top: 50px;
     font-weight: bold;
     margin-bottom: 10px;

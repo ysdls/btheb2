@@ -145,6 +145,16 @@
     width: calc(25% - 15px);
 }
 
+@media (max-width: 1024px) {
+    .brand-wrapper {
+        width: calc(50% - 15px);
+    }
+    .section {
+        width: 100%;
+        padding: 80px 10px;
+    }
+}
+
 .brand-box {
     display: flex;
     flex-direction: column;
@@ -152,7 +162,7 @@
 }
 
 .banner {
-    height: 250px;
+    height: 215px;
     position: relative;
     width: 100%;
     overflow: hidden;
@@ -173,12 +183,14 @@
 }
 .brands img {
     border-radius: 50%;
-    width: 120px;
-    height: 120px;
+    width: 200px;
+    height: 125px;
     border: 2px solid black;
+    object-fit: cover;
+    object-position: center;
 }
 .shop-info {
-    height: 250px;
+    height: 215px;
     display: flex;
     flex-direction: column;
     position: relative;
