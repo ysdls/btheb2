@@ -35,7 +35,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: start;
-    width: 90%;
+    width: 100%;
     margin: auto;
 }
 
@@ -45,6 +45,8 @@ header {
     padding: 0;
     margin: 0;
     align-items: center;
+    position: relative;
+    left: 5%;
 }
 
 .navbar > ul li {
@@ -58,11 +60,11 @@ header {
     text-transform: uppercase;
 }
 
-.logo {
-    background: url(btb-a-2.svg) no-repeat center center;
+/* .logo {
+    background: url(btheb_bi.png) no-repeat center center;
     width: 100px;
     height: 100px;
-}
+} */
 
 @media (max-width: 1024px) {
     .hamburger {
@@ -263,7 +265,6 @@ header {
 }
 
 .footer-section div {
-    padding-top: 20px;
     line-height: 1.5;
 }
 
