@@ -127,7 +127,7 @@
             });
             document.getElementById("year-select").addEventListener("change", function () {
                 var selectedYear = this.value;
-                window.location.href = `/${selectedYear}.html`;
+                window.location.href = `${selectedYear}.html`;
             });
             window.addEventListener("load", function () {
                 var currentYear = window.location.pathname.split("/").pop();
