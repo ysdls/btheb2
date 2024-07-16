@@ -12,3 +12,10 @@
     color: white;
     border-radius: 10px;
 }
+.list-3 {
+    text-align: center;
+}
+.list-3 p {
+    font-size: 1.6rem;
+
+}
