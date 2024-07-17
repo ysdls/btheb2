@@ -244,6 +244,10 @@ h1, p, a {
 #has-submenu .submenu a:hover {
     color:white;
 }
+#has-submenu .submenu li:hover > a {
+    color: white; /* 추가된 부분 */
+}
+
 
 #has-submenu:hover .submenu,
 #has-submenu:focus-within .submenu {
