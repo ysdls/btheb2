@@ -110,14 +110,13 @@
                     <p>서울의 뷰티복합문화공간 'B the B'</p>
                     <p>소식을 빠르게 만나보세요</p>
                 </div>
-                <div class="container">
+                <div class="container" id="insta-feed">
                     <div class="card">
                         <div class="card-content">
                             <div class="profile">
                                 <img src="btb-a-2.svg" alt="Profile" />
                                 <div>
                                     <div class="username">btheb_official</div>
-                                    <!-- <div class="timestamp">1 week ago</div> -->
                                 </div>
                             </div>
                             <img src="2403_1.jpg" alt="Image 1" />
@@ -129,7 +128,6 @@
                                 <img src="btb-a-2.svg" alt="Profile" />
                                 <div>
                                     <div class="username">btheb_official</div>
-                                    <!-- <div class="timestamp">1 week ago</div> -->
                                 </div>
                             </div>
                             <img src="2403_1.jpg" alt="Image 1" />
@@ -141,7 +139,6 @@
                                 <img src="btb-a-2.svg" alt="Profile" />
                                 <div>
                                     <div class="username">btheb_official</div>
-                                    <!-- <div class="timestamp">1 week ago</div> -->
                                 </div>
                             </div>
                             <img src="2403_1.jpg" alt="Image 1" />
@@ -153,7 +150,6 @@
                                 <img src="btb-a-2.svg" alt="Profile" />
                                 <div>
                                     <div class="username">btheb_official</div>
-                                    <!-- <div class="timestamp">1 week ago</div> -->
                                 </div>
                             </div>
                             <img src="2403_1.jpg" alt="Image 1" />
@@ -165,7 +161,6 @@
                                 <img src="btb-a-2.svg" alt="Profile" />
                                 <div>
                                     <div class="username">btheb_official</div>
-                                    <!-- <div class="timestamp">1 week ago</div> -->
                                 </div>
                             </div>
                             <img src="2403_1.jpg" alt="Image 1" />
@@ -177,7 +172,6 @@
                                 <img src="btb-a-2.svg" alt="Profile" />
                                 <div>
                                     <div class="username">btheb_official</div>
-                                    <!-- <div class="timestamp">1 week ago</div> -->
                                 </div>
                             </div>
                             <img src="2403_1.jpg" alt="Image 1" />
@@ -189,10 +183,11 @@
                                 <img src="btb-a-2.svg" alt="Profile" />
                                 <div>
                                     <div class="username">btheb_official</div>
-                                    <!-- <div class="timestamp">1 week ago</div> -->
                                 </div>
                             </div>
-                            <img src="2403_1.jpg" alt="Image 1" />
+                            <a href="">
+                                <img src="2403_1.jpg" alt="Image 1" />
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -233,6 +228,50 @@
                     autoplaySpeed: 2000,
                 });
             });
+            const accessToken =
+                "IGQWRQYlpsbHJib0VnLUc4Y0tBdFQxVFFVSDNSbHRZAcDJTMmtELV91TUUtY0htcUMwWjZAjdGV0NFRKTGNLUDNIbzkwRFpkTzFsMGdDMFpHSFlaNkNPU0piTHYzLU1xdUxyTG5GQ2h6ZA2QzcTFWdEZA4aEc2RTRlQ0kZD"; // 발급받은 액세스 토큰을 여기에 입력하세요.
+            const userId = "ysigram_84"; // aaaa 계정의 사용자 ID를 여기에 입력하세요.
+
+            const feedContainer = document.getElementById("insta-feed");
+            const maxItems = 7;
+            let itemsFetched = 0;
+            let index = 0;
+
+            function fetchAndDisplayPosts(data) {
+                while (itemsFetched < maxItems && index < data.data.length) {
+                    if (data.data[index].media_type !== "VIDEO") {
+                        const html = `
+                <div class="card views${7 - itemsFetched}">
+                    <div class="card-content">
+                        <div class="profile">
+                            <img src="btb-a-2.svg" alt="Profile" />
+                            <div>
+                                <div class="username">btheb_official</div>
+                            </div>
+                        </div>
+                        <a href="${data.data[index].permalink}" target="_blank">
+                            <img src="${data.data[index].media_url}" alt="Image" />
+                        </a>
+                    </div>
+                </div>
+            `;
+                        feedContainer.insertAdjacentHTML("beforeend", html);
+                        itemsFetched++;
+                    }
+                    index++;
+                }
+            }
+
+            // fetch(
+            //     `https://graph.instagram.com/me/media?fields=id,caption,media_url,media_type,permalink&access_token=${accessToken}`
+            // )
+            //     .then((response) => response.json())
+            //     .then((data) => {
+            //         fetchAndDisplayPosts(data);
+            //     })
+            //     .catch((error) => {
+            //         console.error("Error fetching Instagram feed:", error);
+            //     });
         </script>
         <script src="script.js"></script>
     </body>
