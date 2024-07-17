@@ -17,7 +17,7 @@ h1, p, a {
 .header {
     color: white;
     position: absolute;
-    width: 100%;
+    width: 97%;
     padding-top: 60px;
     z-index: 1000;
 }
