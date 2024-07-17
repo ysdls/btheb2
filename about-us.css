@@ -90,10 +90,6 @@
     line-height: 2;
 }
 
-.text-box img {
-    width: 200px;
-    margin:0 auto;
-}
 
 #about1 {
     position: relative;
@@ -135,4 +131,7 @@
 }
 .section .content h1 {
     text-transform: uppercase;
+}
+.logo-section img:first-child {
+    margin-right: 40px;
 }
