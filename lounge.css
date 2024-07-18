@@ -9,6 +9,17 @@
 
 }
 
+.video-background2 {
+    position: relative;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: white;
+
+}
+
 #video-background-video {
     position: absolute;
     top: 50%;
