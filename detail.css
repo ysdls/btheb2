@@ -51,6 +51,19 @@
     cursor: pointer;
     text-decoration: none;
 }
+.back button {
+    padding: 10px 20px;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.back button:hover {
+    color:white;
+    background: gray;
+}
 .back a:hover {
     color:white;
     background: gray;
